@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://crwmrta25dwcu"]
+
+[ext_resource type="FontFile" uid="uid://bettp6wa1s8aa" path="res://theme/Raleway-Medium.ttf" id="1_8ab6e"]
+
+[resource]
+default_font = ExtResource("1_8ab6e")

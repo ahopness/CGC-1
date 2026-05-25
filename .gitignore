@@ -1,3 +1,8 @@
+PCKs/
+EXPORTS/
+pc/RUNTIME/
+.godot/
+
 # Gradle files
 .gradle/
 build/

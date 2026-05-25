@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://yd54i4mf3eef"]
+
+[ext_resource type="Material" uid="uid://caef8mc706ped" path="res://vfx/mat_mix_add.tres" id="1_kk1sa"]
+[ext_resource type="Texture2D" uid="uid://du0yk1boqlkof" path="res://icons/icon_bloodloss.png" id="2_t5v3y"]
+[ext_resource type="Texture2D" uid="uid://brd22umiu2o5j" path="res://logos/logo_bloodloss.png" id="3_f5tto"]
+[ext_resource type="FontFile" uid="uid://brksyf08dvub" path="res://theme/Raleway-Light.ttf" id="4_q5eq8"]
+
+[node name="Control" type="Control" unique_id=1668093468]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="card" type="HBoxContainer" parent="." unique_id=474488236]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 360.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="icon" type="TextureRect" parent="card" unique_id=132871009]
+material = ExtResource("1_kk1sa")
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+texture = ExtResource("2_t5v3y")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="logo" type="TextureRect" parent="card" unique_id=1113418955]
+material = ExtResource("1_kk1sa")
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+texture = ExtResource("3_f5tto")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="text" type="VBoxContainer" parent="card" unique_id=1870389204]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="picth" type="Label" parent="card/text" unique_id=1906356846]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+text = "Control, oppress and consume the blood of your enemies to win this arena."
+autowrap_mode = 2
+
+[node name="description" type="Label" parent="card/text" unique_id=1235295698]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_q5eq8")
+text = "Inside a depression in the middle of a desert a blind soldier holds a special power: blood manipulation. Control, oppress and consume the blood of your enemies to win this arena amidst the world comes to an end."
+autowrap_mode = 2
