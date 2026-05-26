@@ -2,6 +2,9 @@ bin/
 pc/RUNTIME/
 .godot/
 
+resources/data/
+resources/soundtrack/
+
 # Gradle files
 .gradle/
 build/

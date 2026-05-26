@@ -1,0 +1,81 @@
+Lucas' Computer Game Collection Vol 1. (a.k.a. CGC-1)
+
+ABOUT
+Imagine you're burried alive, what things would be floating around in your head while you are waiting for your demise?
+
+This is a collection of 5+1 games made between 2024 and 2026 , all of these titles contain experimental takes on different genres, from action to simulation, from horror to puzzle, dive into these wierd games, fall in love or hate every detail of the worlds and characters, no in-betweens, twee and brutal are the only available feelings here.
+
+These titles are more akin to art pieces rathen than actual games, fun isn't garanteed. Everything is design with an intent in mind, but it's ok if you don't get it at first, neither do i most of the time, just try to feel it.
+
+Something you wanna talk about? Hit me up at 'dev.lucas.angelo@gmail.com'.
+Looking for more? Go check 'https://lucasangelo.dev' out.
+
+KEYBOARD SHORTCUTS (Universal/At any game)
+[ESC] Quit
+[F4] toggle fullscreen
+
+CREDITS
+Background music from Perfect Blue OST 'Virtual Mima'
+Squigglevision Shader by 'tentabrobpy'
+UI Audio by 'Kenney'
+
+--------------------
+
+Blood Loss (a.k.a. nietzsche)
+
+Control, oppress and consume the blood of your enemies to win this arena.
+
+Inside a depression in the middle of a desert a blind soldier holds a special power: blood manipulation. Control, oppress and consume the blood of your enemies to win this arena amidst the world comes to an end.
+Featuring music by OKMO.
+
+"It's in our heartbeats."
+
+--------------------
+
+Tidal Hell (a.k.a. wargames)
+
+A zero-player game where you make weapons and watch solders fight.
+
+An anti-war zero-player simulation game where you engineer weapons and send off your pawns to the battlefield and watch them fight. You gain more resources each time your team wins a round. Good luck, you'll need it.
+Featuring music by Jarren Crist.
+
+"Shoot first, apoligize later."
+
+--------------------
+
+Castration (a.k.a. caledonia)
+
+Complex enemy AI inside a reality bending prison.
+
+With controls that are out of the ordinary, the enemies also demonstrate complex behaviors that are only understood if you pay close attention to your surroundings. You can't make out if you're awake or still dreaming, reality is twisted around this far away prison with eyes around every corner and your biggest hope is to make it out in one peace.
+
+"There are only dormitories."
+
+--------------------
+
+Full Metal Syncope (a.k.a. amianto)
+
+Explore this surreal world, meet, greet & scream at it's residents.
+
+Floating islands inside a virtual landscape, post-post-modern writing & retro visuals are all part of this part visual novel, part fps game. Dive in, walk, talk, scream. Gather points, but for what purpose? no one is really sure. Don't forget to beware, the horse is the white of the eye and the dark within. Eyes wide open.
+Featuring music by Jarren Crist.
+
+"People are graveyards."
+
+--------------------
+
+GIFT (a.k.a. pier)
+
+You are on the post-death, search it, find memories, find yourself.
+
+GIFT is about death and rebirth. Explore these liminal monochromatic fragments of memories, breath in that doubts that create fear, search it, find memories, find yourself. It's in our hands, everything is.
+
+--------------------
+
+nDV: NeuroDive (a.k.a. yosemite)
+
+Reverse hashing reconstruction software for mass storage segments.
+
+Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrupted data here is encrypted, use reverse hashing techiniches to recontruct the echos of this single constant in this spiritual succesor to GIFT.
+
+"The natural order of everything is chaos."
