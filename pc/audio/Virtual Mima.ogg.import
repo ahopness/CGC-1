@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpx5b7h8lh4d"
+path="res://.godot/imported/Virtual Mima.ogg-9f0a3555abba2d64198a357dc2bd4b64.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Virtual Mima.ogg"
+dest_files=["res://.godot/imported/Virtual Mima.ogg-9f0a3555abba2d64198a357dc2bd4b64.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

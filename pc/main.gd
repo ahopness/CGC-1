@@ -18,7 +18,7 @@ func _ready() -> void:
 	await tween.finished
 	await get_tree().create_timer(1).timeout
 	
-	$intro/roll.play()
+	#$intro/roll.play()
 	tween = get_tree().create_tween() \
 		.set_ease(Tween.EASE_IN) \
 		.set_trans(Tween.TRANS_EXPO)

@@ -1,6 +1,12 @@
 [gd_resource type="Theme" format=3 uid="uid://crwmrta25dwcu"]
 
-[ext_resource type="FontFile" uid="uid://bettp6wa1s8aa" path="res://theme/Raleway-Medium.ttf" id="1_8ab6e"]
+[ext_resource type="FontFile" uid="uid://ddicje4b0np02" path="res://theme/SpaceMono-Bold.ttf" id="1_4yjuo"]
+[ext_resource type="FontFile" uid="uid://b71ku8fa3j60i" path="res://theme/SpaceMono-Regular.ttf" id="1_8ab6e"]
+[ext_resource type="FontFile" uid="uid://con3yucljkm6r" path="res://theme/SpaceMono-Italic.ttf" id="2_gco77"]
 
 [resource]
 default_font = ExtResource("1_8ab6e")
+default_font_size = 13
+RichTextLabel/fonts/bold_font = ExtResource("1_4yjuo")
+RichTextLabel/fonts/italics_font = ExtResource("2_gco77")
+RichTextLabel/fonts/normal_font = ExtResource("1_8ab6e")

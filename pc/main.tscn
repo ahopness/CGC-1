@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://cbughadxwyqnw"]
 
 [ext_resource type="Theme" uid="uid://crwmrta25dwcu" path="res://theme/theme.tres" id="1_1bvp3"]
-[ext_resource type="Material" uid="uid://caef8mc706ped" path="res://vfx/mat_mix_add.tres" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cmwq81tslwy3q" path="res://bg.png" id="2_7mycd"]
 [ext_resource type="Script" uid="uid://bpjsykxal8v5r" path="res://main.gd" id="2_82xsv"]
 [ext_resource type="AudioStream" uid="uid://cx8wuf1bni8vt" path="res://audio/click2.ogg" id="3_0odxb"]
 [ext_resource type="PackedScene" uid="uid://yd54i4mf3eef" path="res://prefabs/card.tscn" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c3yuidasneuex" path="res://icons/icon_tidalhell.png" id="4_efxa6"]
-[ext_resource type="AudioStream" uid="uid://c0nr8rjp8bdej" path="res://audio/xtal.mp3" id="4_lswn8"]
+[ext_resource type="AudioStream" uid="uid://dpx5b7h8lh4d" path="res://audio/Virtual Mima.ogg" id="4_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://dy0lhofqk38y7" path="res://logos/logo_tidalhell.png" id="5_dg77c"]
 [ext_resource type="Texture2D" uid="uid://bp45m255u0lfp" path="res://icons/icon_castration.png" id="6_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cndiflvwpukul" path="res://logos/logo_castration.png" id="7_w48qg"]
@@ -38,16 +37,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_1bvp3")
 script = ExtResource("2_82xsv")
-metadata/_edit_horizontal_guides_ = [516.0, 57.0]
-metadata/_edit_vertical_guides_ = [980.0, 40.0]
+metadata/_edit_horizontal_guides_ = [670.0, 57.0]
+metadata/_edit_vertical_guides_ = [1240.0, 40.0]
 
 [node name="click" type="AudioStreamPlayer" parent="." unique_id=626977108]
 stream = ExtResource("3_0odxb")
 volume_db = -5.0
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=2048794813]
-stream = ExtResource("4_lswn8")
-volume_db = -10.0
+stream = ExtResource("4_xuqvo")
 autoplay = true
 
 [node name="screenshot" type="TextureRect" parent="." unique_id=1336550990]
@@ -74,86 +72,93 @@ grow_vertical = 2
 [node name="card_b" parent="catalog" unique_id=474488236 instance=ExtResource("3_h2yge")]
 layout_mode = 1
 
-[node name="description" parent="catalog/card_b/card/text" parent_id_path=PackedInt32Array(474488236, 1870389204) index="1" unique_id=1235295698]
-text = "Inside a depression in the middle of a desert, a blind soldier holds a special power: blood manipulation. Control, oppress and consume the blood of your enemies to win this arena amidst the world comes to an end."
+[node name="description" parent="catalog/card_b/hbcon" parent_id_path=PackedInt32Array(474488236, 474488236) index="2" unique_id=36024194]
+text = "[b]Control, oppress and consume the blood of your enemies to win this arena.[/b]
+
+Inside a depression in the middle of a desert a blind soldier holds a special power: blood manipulation. Control, oppress and consume the blood of your enemies to win this arena amidst the world comes to an end.
+Featuring music by [b]OKMO[/b].
+
+[i]\"It's in our heartbeats.\"[/i]"
 
 [node name="card_t" parent="catalog" unique_id=1029304753 instance=ExtResource("3_h2yge")]
 visible = false
 layout_mode = 1
 
-[node name="icon" parent="catalog/card_t/card" parent_id_path=PackedInt32Array(1029304753, 474488236) index="0" unique_id=132871009]
+[node name="icon" parent="catalog/card_t/hbcon" parent_id_path=PackedInt32Array(1029304753, 474488236) index="0" unique_id=132871009]
 texture = ExtResource("4_efxa6")
 
-[node name="logo" parent="catalog/card_t/card" parent_id_path=PackedInt32Array(1029304753, 474488236) index="1" unique_id=1113418955]
+[node name="logo" parent="catalog/card_t/hbcon" parent_id_path=PackedInt32Array(1029304753, 474488236) index="1" unique_id=1113418955]
 texture = ExtResource("5_dg77c")
 
-[node name="picth" parent="catalog/card_t/card/text" parent_id_path=PackedInt32Array(1029304753, 1870389204) index="0" unique_id=1906356846]
-text = "A zero-player game where you make weapons and watch solders fight."
+[node name="description" parent="catalog/card_t/hbcon" parent_id_path=PackedInt32Array(1029304753, 474488236) index="2" unique_id=36024194]
+text = "[b]A zero-player game where you make weapons and watch solders fight.[/b]
 
-[node name="description" parent="catalog/card_t/card/text" parent_id_path=PackedInt32Array(1029304753, 1870389204) index="1" unique_id=1235295698]
-text = "An anti-war zero-player simulation game where you engineer weapons and send off your pawns to the battlefield and watch them fight. You gain more resources each time your team wins a round. Good luck, you'll need it."
+An anti-war zero-player simulation game where you engineer weapons and send off your pawns to the battlefield and watch them fight. You gain more resources each time your team wins a round. Good luck, you'll need it.
+Featuring music by [b]Jarren Crist[/b].
+
+[i]\"Shoot first, apoligize later.\"[/i]"
 
 [node name="card_c" parent="catalog" unique_id=1935760614 instance=ExtResource("3_h2yge")]
 visible = false
 layout_mode = 1
 
-[node name="icon" parent="catalog/card_c/card" parent_id_path=PackedInt32Array(1935760614, 474488236) index="0" unique_id=132871009]
+[node name="icon" parent="catalog/card_c/hbcon" parent_id_path=PackedInt32Array(1935760614, 474488236) index="0" unique_id=132871009]
 texture = ExtResource("6_ycdy4")
 
-[node name="logo" parent="catalog/card_c/card" parent_id_path=PackedInt32Array(1935760614, 474488236) index="1" unique_id=1113418955]
+[node name="logo" parent="catalog/card_c/hbcon" parent_id_path=PackedInt32Array(1935760614, 474488236) index="1" unique_id=1113418955]
 texture = ExtResource("7_w48qg")
 
-[node name="picth" parent="catalog/card_c/card/text" parent_id_path=PackedInt32Array(1935760614, 1870389204) index="0" unique_id=1906356846]
-text = "Complex enemy AI inside a reality bending prison."
+[node name="description" parent="catalog/card_c/hbcon" parent_id_path=PackedInt32Array(1935760614, 474488236) index="2" unique_id=36024194]
+text = "[b]Complex enemy AI inside a reality bending prison.[/b]
 
-[node name="description" parent="catalog/card_c/card/text" parent_id_path=PackedInt32Array(1935760614, 1870389204) index="1" unique_id=1235295698]
-text = "With controls that are out of the ordinary, the enemies also demonstrate complex behaviors that are only understood if you pay close attention to your surroundings. You can't make out if you're awake or still dreaming, reality is twisted around this far away prison with eyes around every corner and your biggest hope is to make it out in one peace."
+With controls that are out of the ordinary, the enemies also demonstrate complex behaviors that are only understood if you pay close attention to your surroundings. You can't make out if you're awake or still dreaming, reality is twisted around this far away prison with eyes around every corner and your biggest hope is to make it out in one peace.
+
+[i]\"There are only dormitories.\"[/i]"
 
 [node name="card_f" parent="catalog" unique_id=1675244766 instance=ExtResource("3_h2yge")]
 visible = false
 layout_mode = 1
 
-[node name="icon" parent="catalog/card_f/card" parent_id_path=PackedInt32Array(1675244766, 474488236) index="0" unique_id=132871009]
+[node name="icon" parent="catalog/card_f/hbcon" parent_id_path=PackedInt32Array(1675244766, 474488236) index="0" unique_id=132871009]
 texture = ExtResource("8_vivmo")
 
-[node name="logo" parent="catalog/card_f/card" parent_id_path=PackedInt32Array(1675244766, 474488236) index="1" unique_id=1113418955]
+[node name="logo" parent="catalog/card_f/hbcon" parent_id_path=PackedInt32Array(1675244766, 474488236) index="1" unique_id=1113418955]
 texture = ExtResource("9_2cqfq")
 
-[node name="picth" parent="catalog/card_f/card/text" parent_id_path=PackedInt32Array(1675244766, 1870389204) index="0" unique_id=1906356846]
-text = "Explore this surreal world, meet, greet & scream at it's residents."
+[node name="description" parent="catalog/card_f/hbcon" parent_id_path=PackedInt32Array(1675244766, 474488236) index="2" unique_id=36024194]
+text = "[b]Explore this surreal world, meet, greet & scream at it's residents.[/b]
 
-[node name="description" parent="catalog/card_f/card/text" parent_id_path=PackedInt32Array(1675244766, 1870389204) index="1" unique_id=1235295698]
-text = "Floating islands inside a virtual landscape, post-post-modern writing & retro visuals are all part of this part visual novel, part fps game. Dive in, walk, talk, scream. Gather points, but for what purpose? no one is really sure. Don't forget to beware, the horse is the white of the eye and the dark within. Eyes wide open."
+Floating islands inside a virtual landscape, post-post-modern writing & retro visuals are all part of this part visual novel, part fps game. Dive in, walk, talk, scream. Gather points, but for what purpose? no one is really sure. Don't forget to beware, the horse is the white of the eye and the dark within. Eyes wide open.
+Featuring music by [b]Jarren Crist[/b].
+
+[i]\"People are graveyards.\"[/i]"
 
 [node name="card_g" parent="catalog" unique_id=1054119299 instance=ExtResource("3_h2yge")]
 visible = false
 layout_mode = 1
 
-[node name="icon" parent="catalog/card_g/card" parent_id_path=PackedInt32Array(1054119299, 474488236) index="0" unique_id=132871009]
-material = null
+[node name="icon" parent="catalog/card_g/hbcon" parent_id_path=PackedInt32Array(1054119299, 474488236) index="0" unique_id=132871009]
 texture = ExtResource("10_yaehf")
 
-[node name="logo" parent="catalog/card_g/card" parent_id_path=PackedInt32Array(1054119299, 474488236) index="1" unique_id=1113418955]
+[node name="logo" parent="catalog/card_g/hbcon" parent_id_path=PackedInt32Array(1054119299, 474488236) index="1" unique_id=1113418955]
 texture = ExtResource("11_074og")
 
-[node name="picth" parent="catalog/card_g/card/text" parent_id_path=PackedInt32Array(1054119299, 1870389204) index="0" unique_id=1906356846]
-text = "You are on the post-death, search it, find memories, find yourself."
+[node name="description" parent="catalog/card_g/hbcon" parent_id_path=PackedInt32Array(1054119299, 474488236) index="2" unique_id=36024194]
+text = "[b]You are on the post-death, search it, find memories, find yourself.[/b]
 
-[node name="description" parent="catalog/card_g/card/text" parent_id_path=PackedInt32Array(1054119299, 1870389204) index="1" unique_id=1235295698]
-text = "GIFT is about death and rebirth. Explore these liminal monochromatic fragments of memories, breath in that doubts that create fear, search it, find memories, find yourself. It's in our hands, everything is."
+GIFT is about death and rebirth. Explore these liminal monochromatic fragments of memories, breath in that doubts that create fear, search it, find memories, find yourself. It's in our hands, everything is."
 
 [node name="extra" type="TextureRect" parent="catalog/card_g" unique_id=58933820]
-material = ExtResource("1_h2yge")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -194.0
-offset_top = 76.0
-offset_right = -122.0
-offset_bottom = 148.0
+offset_left = -244.0
+offset_top = 40.0
+offset_right = -172.0
+offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 0.2617994
@@ -166,17 +171,18 @@ stretch_mode = 4
 visible = false
 layout_mode = 1
 
-[node name="icon" parent="catalog/card_n/card" parent_id_path=PackedInt32Array(833165612, 474488236) index="0" unique_id=132871009]
+[node name="icon" parent="catalog/card_n/hbcon" parent_id_path=PackedInt32Array(833165612, 474488236) index="0" unique_id=132871009]
 texture = ExtResource("14_2cqfq")
 
-[node name="logo" parent="catalog/card_n/card" parent_id_path=PackedInt32Array(833165612, 474488236) index="1" unique_id=1113418955]
+[node name="logo" parent="catalog/card_n/hbcon" parent_id_path=PackedInt32Array(833165612, 474488236) index="1" unique_id=1113418955]
 texture = ExtResource("15_yaehf")
 
-[node name="picth" parent="catalog/card_n/card/text" parent_id_path=PackedInt32Array(833165612, 1870389204) index="0" unique_id=1906356846]
-text = "Reverse hashing reconstruction software for mass storage segments."
+[node name="description" parent="catalog/card_n/hbcon" parent_id_path=PackedInt32Array(833165612, 474488236) index="2" unique_id=36024194]
+text = "[b]Reverse hashing reconstruction software for mass storage segments.[/b]
 
-[node name="description" parent="catalog/card_n/card/text" parent_id_path=PackedInt32Array(833165612, 1870389204) index="1" unique_id=1235295698]
-text = "Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrupted data here is encrypted, use reverse hashing techiniches to recontruct the echos of this single constant in this spiritual succesor to GIFT."
+Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrupted data here is encrypted, use reverse hashing techiniches to recontruct the echos of this single constant in this spiritual succesor to GIFT.
+
+[i]\"The natural order of everything is chaos.\"[/i]"
 
 [node name="statusbar" type="Control" parent="." unique_id=360057336]
 layout_mode = 1
@@ -192,9 +198,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = -63.0
-offset_right = 85.0
-offset_bottom = -43.0
+offset_top = -56.0
+offset_right = 88.0
+offset_bottom = -36.0
 grow_vertical = 0
 text = "v0.0.0"
 
@@ -205,10 +211,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -99.0
-offset_top = -68.0
+offset_left = -104.0
+offset_top = -61.0
 offset_right = -40.0
-offset_bottom = -40.0
+offset_bottom = -33.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_default_cursor_shape = 2
@@ -245,9 +251,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -197.0
-offset_top = -68.0
+offset_top = -61.0
 offset_right = -138.0
-offset_bottom = -40.0
+offset_bottom = -33.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_default_cursor_shape = 2
@@ -262,9 +268,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -119.99997
-offset_top = -65.99997
+offset_top = -61.99994
 offset_right = 164.0
-offset_bottom = -34.0
+offset_bottom = -29.999939
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.8, 0.8)
@@ -350,7 +356,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5)
+color = Color(0, 0, 0, 0.70000005)
 
 [node name="back" type="Button" parent="help" unique_id=397463025]
 layout_mode = 1
@@ -366,7 +372,7 @@ mouse_default_cursor_shape = 2
 text = "Take Me Back"
 flat = true
 
-[node name="text" type="Label" parent="help" unique_id=1766730163]
+[node name="text" type="RichTextLabel" parent="help" unique_id=1826956055]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -377,7 +383,10 @@ offset_right = -177.0
 offset_bottom = -63.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "ABOUT
+bbcode_enabled = true
+text = "[b]ABOUT[/b]
+Imagine you're burried alive, what things would be floating around in your head while you are waiting for your demise?
+
 This is a collection of 5+1 games made between 2024 and 2026 , all of these titles contain experimental takes on different genres, from action to simulation, from horror to puzzle, dive into these wierd games, fall in love or hate every detail of the worlds and characters, no in-betweens, twee and brutal are the only available feelings here.
 
 These titles are more akin to art pieces rathen than actual games, fun isn't garanteed. Everything is design with an intent in mind, but it's ok if you don't get it at first, neither do i most of the time, just try to feel it.
@@ -385,9 +394,14 @@ These titles are more akin to art pieces rathen than actual games, fun isn't gar
 Something you wanna talk about? Hit me up at 'dev.lucas.angelo@gmail.com'.
 Looking for more? Go check 'https://lucasangelo.dev' out.
 
-KEYBOARD SHORTCUTS (Any Game)
+[b]KEYBOARD SHORTCUTS (Universal/At any game)[/b]
 [ESC] Quit
-[F4] toggle fullscreen"
+[F4] toggle fullscreen
+
+[b]CREDITS[/b]
+Background music from Perfect Blue OST 'Virtual Mima'
+Squigglevision Shader by 'tentabrobpy'
+UI Audio by 'Kenney'"
 autowrap_mode = 2
 
 [node name="intro" type="Control" parent="." unique_id=2078383267]

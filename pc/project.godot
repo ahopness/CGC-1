@@ -17,13 +17,14 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 config/icon="uid://exsjx3xw7x4g"
+config/windows_native_icon="res://icon.ico"
 
 [display]
 
-window/size/viewport_width=1024
-window/size/viewport_height=576
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-window/stretch/scale=0.8
+window/stretch/aspect="expand"
 window/size/mode.release=3
 
 [physics]

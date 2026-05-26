@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/xtal.mp3-f46cd3bfc2c6ad166c8879f69c9861d6.mp3
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
