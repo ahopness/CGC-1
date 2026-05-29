@@ -1,9 +1,10 @@
-bin/
+# CGC-1 game packs, binary files
 pc/RUNTIME/
-.godot/
-
+bin/
 resources/data/
-resources/soundtrack/
+
+# Godot cache files
+.godot/
 
 # Gradle files
 .gradle/

@@ -10,10 +10,6 @@ directories
 /resources - Screenshots, logos, icons, descriptions, etc.
 
 todos
-- GIFT: Export new android version 
-- GIFT: Export standalone pc version 
-- start making android launcher
-- make script or buildall.sh script
 - update playstore
 - - update gift
 - - publish cgc-1
@@ -28,3 +24,5 @@ todos
 - - add screenshots
 - - add new links to itch + playstore
 - make trailer
+- add git lfs support for .pck game files (?)
+- make build-all.sh script (?)
