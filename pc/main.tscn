@@ -186,11 +186,12 @@ Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrup
 
 [node name="statusbar" type="Control" parent="." unique_id=360057336]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [node name="version" type="Label" parent="statusbar" unique_id=415111910]
 layout_mode = 1
@@ -243,22 +244,41 @@ mouse_filter = 2
 texture = ExtResource("24_a6jrf")
 stretch_mode = 5
 
-[node name="help" type="Button" parent="statusbar" unique_id=1722449852]
+[node name="topbar" type="Control" parent="." unique_id=1387815503]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -197.0
-offset_top = -61.0
-offset_right = -138.0
-offset_bottom = -33.0
-grow_horizontal = 0
-grow_vertical = 0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+
+[node name="website" type="Button" parent="topbar" unique_id=1304659235]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 38.0
+offset_right = 72.0
+offset_bottom = 114.0
+focus_neighbor_right = NodePath("../../selection/left_arrow")
+focus_neighbor_bottom = NodePath("../../selection/left_arrow")
 mouse_default_cursor_shape = 2
-text = "Help"
+icon = ExtResource("19_cegan")
 flat = true
+expand_icon = true
+
+[node name="about" type="Button" parent="topbar" unique_id=1722449852]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -174.0
+offset_top = 46.0
+offset_right = -38.0
+offset_bottom = 74.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+text = "About Collection"
+flat = true
+alignment = 2
 
 [node name="selection" type="HBoxContainer" parent="." unique_id=534973712]
 layout_mode = 1
@@ -335,20 +355,7 @@ mouse_default_cursor_shape = 2
 icon = ExtResource("18_074og")
 flat = true
 
-[node name="website" type="Button" parent="." unique_id=1304659235]
-layout_mode = 0
-offset_left = -4.0
-offset_top = 38.0
-offset_right = 72.0
-offset_bottom = 114.0
-focus_neighbor_right = NodePath("../selection/left_arrow")
-focus_neighbor_bottom = NodePath("../selection/left_arrow")
-mouse_default_cursor_shape = 2
-icon = ExtResource("19_cegan")
-flat = true
-expand_icon = true
-
-[node name="help" type="ColorRect" parent="." unique_id=1001831415]
+[node name="about" type="ColorRect" parent="." unique_id=1001831415]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -358,27 +365,28 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.70000005)
 
-[node name="back" type="Button" parent="help" unique_id=397463025]
+[node name="back" type="Button" parent="about" unique_id=397463025]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -153.0
-offset_top = 57.0
-offset_right = -41.0
-offset_bottom = 85.0
+offset_left = -175.0
+offset_top = 46.0
+offset_right = -39.0
+offset_bottom = 74.0
 grow_horizontal = 0
 mouse_default_cursor_shape = 2
 text = "Take Me Back"
 flat = true
+alignment = 2
 
-[node name="text" type="RichTextLabel" parent="help" unique_id=1826956055]
+[node name="text" type="RichTextLabel" parent="about" unique_id=1826956055]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
-offset_top = 57.0
+offset_top = 46.0
 offset_right = -177.0
 offset_bottom = -63.0
 grow_horizontal = 2
@@ -456,8 +464,9 @@ expand_mode = 1
 stretch_mode = 5
 
 [connection signal="pressed" from="statusbar/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="statusbar/help" to="statusbar/play/click" method="play"]
-[connection signal="pressed" from="statusbar/help" to="help" method="set_visible" binds= [true]]
+[connection signal="pressed" from="topbar/website" to="." method="_on_website_pressed"]
+[connection signal="pressed" from="topbar/about" to="statusbar/play/click" method="play"]
+[connection signal="pressed" from="topbar/about" to="about" method="set_visible" binds= [true]]
 [connection signal="pressed" from="selection/left_arrow" to="." method="decrement_selection"]
 [connection signal="pressed" from="selection/selection_b" to="." method="set_selection" binds= [0]]
 [connection signal="pressed" from="selection/selection_t" to="." method="set_selection" binds= [1]]
@@ -466,9 +475,8 @@ stretch_mode = 5
 [connection signal="pressed" from="selection/selection_g" to="." method="set_selection" binds= [4]]
 [connection signal="pressed" from="selection/selection_n" to="." method="set_selection" binds= [5]]
 [connection signal="pressed" from="selection/right_arrow" to="." method="increment_selection"]
-[connection signal="pressed" from="website" to="." method="_on_website_pressed"]
-[connection signal="pressed" from="help/back" to="click" method="play"]
-[connection signal="pressed" from="help/back" to="help" method="set_visible" binds= [false]]
+[connection signal="pressed" from="about/back" to="click" method="play"]
+[connection signal="pressed" from="about/back" to="about" method="set_visible" binds= [false]]
 
 [editable path="catalog/card_b"]
 [editable path="catalog/card_t"]
