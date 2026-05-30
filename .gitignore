@@ -1,7 +1,7 @@
 # CGC-1 game packs, binary files
 pc/RUNTIME/
-bin/
 resources/data/
+resources/builds/
 
 # Godot cache files
 .godot/
