@@ -1,5 +1,4 @@
 # CGC-1 game packs, binary files
-pc/RUNTIME/
 resources/data/
 resources/builds/
 
@@ -40,3 +39,4 @@ google-services.json
 
 # Android Profiling
 *.hprof
+*.dm

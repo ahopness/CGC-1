@@ -1,26 +1,3 @@
-Lucas' Computer Game Collection Vol. 1 (a.k.a. CGC-1)
-
-ABOUT
-Imagine you're buried alive, what things would be floating around in your head while you are waiting for your demise?
-
-This is a collection of 5+1 games made between 2024 and 2026 , all of these titles contain experimental takes on different genres, from action to simulation, from horror to puzzle, dive into these wierd games, fall in love or hate every detail of the worlds and characters, no in-between, twee and brutal are the only available feelings here.
-
-These titles are more akin to art pieces rather than actual games, fun isn't guaranteed. Everything is design with an intent in mind, but it's ok if you don't get it at first, neither do i most of the time, just try to feel it.
-
-Something you wanna talk about? Hit me up at 'dev.lucas.angelo@gmail.com'.
-Looking for more? Go check 'https://lucasangelo.dev' out.
-
-KEYBOARD SHORTCUTS (Universal/At any game)
-[ESC] Quit
-[F4] toggle fullscreen
-
-CREDITS
-Background music from Perfect Blue OST 'Virtual Mima'
-Squigglevision Shader by 'tentabrobpy'
-UI Audio by 'Kenney'
-
---------------------
-
 Blood Loss (a.k.a. nietzsche)
 
 Control, oppress and consume the blood of your enemies to win this arena.
