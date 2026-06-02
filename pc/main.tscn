@@ -180,7 +180,7 @@ texture = ExtResource("15_yaehf")
 [node name="description" parent="catalog/card_n/hbcon" parent_id_path=PackedInt32Array(833165612, 474488236) index="2" unique_id=36024194]
 text = "[b]Reverse hashing reconstruction software for mass storage segments.[/b]
 
-Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrupted data here is encrypted, use reverse hashing techiniches to recontruct the echos of this single constant in this spiritual succesor to GIFT.
+Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrupted data here is encrypted, use reverse hashing techniques​ to reconstruct the echoes of this single constant in this spiritual successor to GIFT.
 
 [i]\"The natural order of everything is chaos.\"[/i]"
 

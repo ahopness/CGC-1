@@ -94,7 +94,7 @@ val gameList = listOf(
         "v1.0rev0",
         "Reverse hashing reconstruction software for mass storage segments.\n" +
                 "\n" +
-                "Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrupted data here is encrypted, use reverse hashing techiniches to recontruct the echos of this single constant in this spiritual succesor to GIFT.\n" +
+                "Recover and decrypt, sniff and scratch, this is - or was - a memoir. Most corrupted data here is encrypted, use reverse hashing techniques to reconstruct the echoes of this single constant in this spiritual successor to GIFT.\n" +
                 "\n" +
                 "\"The natural order of everything is chaos.\"",
         R.drawable.logo_ndvneurodive,
