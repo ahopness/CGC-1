@@ -1,7 +1,3 @@
-# CGC-1 game packs, binary files
-resources/data/
-resources/builds/
-
 # Godot cache files
 .godot/
 
