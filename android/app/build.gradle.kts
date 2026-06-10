@@ -15,8 +15,8 @@ android {
         applicationId = "dev.lucasangelo.cgc1"
         minSdk = 24
         targetSdk = 36
-        versionCode = 2
-        versionName = "v1.0rev0"
+        versionCode = 3
+        versionName = "v1.0rev1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
