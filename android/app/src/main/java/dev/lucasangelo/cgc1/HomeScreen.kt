@@ -1,14 +1,7 @@
 package dev.lucasangelo.cgc1
 
-import android.content.Context
 import android.content.Intent
-import android.hardware.Sensor
-import android.hardware.SensorEvent
-import android.hardware.SensorEventListener
-import android.hardware.SensorManager
-import android.util.Log
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -51,10 +44,8 @@ import androidx.compose.material3.SheetState
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -63,7 +54,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -87,10 +77,6 @@ fun HomeScreen(onGameStartRequest :(Int) -> Unit) {
     val pagerState :PagerState = rememberPagerState ( pageCount = { pageList.size } )
     val currentGame :Game? by remember(pagerState, pageList) { derivedStateOf { pageList[pagerState.currentPage] } }
 
-    val tilt by rememberTiltOffset()
-    val tiltX by animateFloatAsState(tilt.component1(), animationSpec = tween(120))
-    val tiltY by animateFloatAsState(tilt.component2(), animationSpec = tween(120))
-
     var showAboutSheet by remember { mutableStateOf( false ) }
 
     Box( modifier = Modifier.fillMaxSize() ) {
@@ -103,14 +89,7 @@ fun HomeScreen(onGameStartRequest :(Int) -> Unit) {
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .fillMaxSize()
-                    .graphicsLayer {
-                        scaleX = 1.1f
-                        scaleY = 1.1f
-                        translationX = tiltX
-                        translationY = tiltY
-                    }
-            )
+                    .fillMaxSize())
 
             Box(
                 modifier = Modifier
@@ -155,30 +134,6 @@ fun HomeScreen(onGameStartRequest :(Int) -> Unit) {
             onDismissRequest = { showAboutSheet = false }
         )
     }
-}
-@Composable
-fun rememberTiltOffset(maxPx: Float = 60f): State<Pair<Float, Float>> {
-    val context = LocalContext.current
-    val sensorManager = remember { context.getSystemService(Context.SENSOR_SERVICE) as SensorManager }
-    val accelerometer = remember { sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) }
-    val tilt = remember { mutableStateOf(0f to 0f) }
-
-    DisposableEffect(accelerometer) {
-        val listener = object : SensorEventListener {
-            override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
-            override fun onSensorChanged(event: SensorEvent) {
-                val x = -event.values[0]
-                val y = event.values[1]
-                val dx = (y).coerceIn(-5f, 5f) / 5f * maxPx
-                val dy = (-x).coerceIn(-5f, 5f) / 5f * maxPx
-                tilt.value = dx to dy
-            }
-        }
-        sensorManager.registerListener(listener, accelerometer, SensorManager.SENSOR_DELAY_GAME)
-        onDispose { sensorManager.unregisterListener(listener) }
-    }
-
-    return tilt
 }
 
 @Composable
