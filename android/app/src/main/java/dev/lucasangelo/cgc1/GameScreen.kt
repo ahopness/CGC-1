@@ -12,12 +12,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.LocalActivity
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.DialogProperties
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -27,11 +37,11 @@ import org.godotengine.godot.GodotFragment
 import org.godotengine.godot.GodotHost
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.delay
+import kotlin.system.exitProcess
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GameScreen(game: Game){
-    BackHandler(enabled = true) { /* consume back to prevent pop */ }
     val containerId = remember { View.generateViewId() }
     AndroidView(
         modifier = Modifier.fillMaxSize(),
@@ -76,6 +86,33 @@ fun GameScreen(game: Game){
                     commit()
             }
         }
+    }
+
+    var quitRequested by remember { mutableStateOf(false) }
+    BackHandler(enabled = true) { quitRequested = !quitRequested }
+    if (quitRequested) {
+        AlertDialog(
+            containerColor = Color.Black,
+            icon = {
+                Image(
+                    painter = painterResource(R.drawable.icon_quit),
+                    contentDescription = null,
+                    modifier = Modifier.size(64.dp)
+                )
+            },
+            title = { Text("Are you sure you want to quit?") },
+            text = { Text("If you quit the app all your progress will be lost.") },
+            onDismissRequest = { quitRequested = false },
+            dismissButton = {
+                Button(onClick = { quitRequested = false }) { Text("Dismiss") }
+            },
+            confirmButton = {
+                val activity = LocalActivity.current as MainActivity
+                OutlinedButton(onClick = { activity.finish(); exitProcess(0) }) { Text("Confirm") }
+            },
+            properties = DialogProperties(usePlatformDefaultWidth = false),
+//            modifier = Modifier.width(480.dp)
+        )
     }
 }
 
