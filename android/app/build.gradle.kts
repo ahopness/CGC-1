@@ -15,8 +15,8 @@ android {
         applicationId = "dev.lucasangelo.cgc1"
         minSdk = 24
         targetSdk = 36
-        versionCode = 4
-        versionName = "v1.0rev2"
+        versionCode = 5
+        versionName = "v1.1rev0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,7 +51,6 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.foundation.layout)
-    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.compose.ui)

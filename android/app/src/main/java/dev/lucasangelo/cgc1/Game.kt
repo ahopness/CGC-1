@@ -104,11 +104,12 @@ val gameList = listOf(
     )
 )
 
-inline fun Color.darken(darkenBy: Float = 0.3f): Color {
+inline fun Color.darken(darkenBy: Float = 0.75f): Color {
+    val multiplier = 1f - darkenBy
     return copy(
-        red = red * darkenBy,
-        green = green * darkenBy,
-        blue = blue * darkenBy,
+        red = (red * multiplier).coerceIn(0f, 1f),
+        green = (green * multiplier).coerceIn(0f, 1f),
+        blue = (blue * multiplier).coerceIn(0f, 1f),
         alpha = alpha
     )
 }

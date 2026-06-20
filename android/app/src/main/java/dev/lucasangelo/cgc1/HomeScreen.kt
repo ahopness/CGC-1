@@ -30,14 +30,9 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.HelpOutline
-import androidx.compose.material.icons.outlined.Link
-import androidx.compose.material.icons.outlined.StarRate
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetState
@@ -159,10 +154,10 @@ fun InfoPanel(game: Game?, onAboutButtonClick: () -> Unit) {
                 val context = LocalContext.current
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     val buttons = listOf(
-                        Triple("About", Icons.AutoMirrored.Outlined.HelpOutline) {
+                        Triple("About", R.drawable.icon_about) {
                             onAboutButtonClick()
                         },
-                        Triple("Open Website", Icons.Outlined.Link) {
+                        Triple("Open Website", R.drawable.icon_link) {
                             context.startActivity(Intent(
                                 Intent.ACTION_VIEW,
                                 "https://lucasangelo.dev".toUri()
@@ -170,7 +165,7 @@ fun InfoPanel(game: Game?, onAboutButtonClick: () -> Unit) {
                                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                             })
                         },
-                        Triple("Rate Collection", Icons.Outlined.StarRate) {
+                        Triple("Rate Collection", R.drawable.icon_star) {
                             context.startActivity(Intent(
                                 Intent.ACTION_VIEW,
                                 "market://details?id=dev.lucasangelo.cgc1".toUri()
@@ -185,10 +180,10 @@ fun InfoPanel(game: Game?, onAboutButtonClick: () -> Unit) {
                             colors = ButtonDefaults.buttonColors(Color.Black),
                             modifier = Modifier.padding(),
                         ) {
-                            Icon(
-                                imageVector = icon,
-                                contentDescription = label,
-                                tint = Color.White
+                            Image(
+                                painter = painterResource(icon),
+                                contentDescription = null,
+                                modifier = Modifier.size(24.dp)
                             )
                             Spacer(Modifier.width(8.dp))
                             Text(
@@ -210,6 +205,7 @@ fun InfoPanel(game: Game?, onAboutButtonClick: () -> Unit) {
                     .fillMaxWidth()
                     .align(Alignment.Center)
                     .padding(horizontal = 8.dp)
+                    .safeDrawingPadding()
             ) {
                 Box(modifier = Modifier.weight(.5f)) {
                     Image(
@@ -279,7 +275,10 @@ fun InfoBar(game: Game?, onGameStartRequest: (Int) -> Unit, modifier: Modifier =
 
             AnimatedContent(
                 targetState = game.color_theme,
-                transitionSpec = { fadeIn(tween(300)) togetherWith fadeOut(tween(300)) }
+                transitionSpec = {
+                    fadeIn(tween(300)) togetherWith
+                            fadeOut(tween(300))
+                }
             ) { colorTheme ->
                 Button(
                     onClick = {
@@ -303,8 +302,23 @@ fun InfoBar(game: Game?, onGameStartRequest: (Int) -> Unit, modifier: Modifier =
                         Color.Gray
                     )
                 ) {
+                    Image(
+                        painter = painterResource(
+                            if (game.playstore_link.isNotBlank())
+                                R.drawable.icon_link
+                            else
+                                R.drawable.icon_play
+                        ),
+                        contentDescription = null,
+                        modifier = Modifier.size(24.dp)
+                    )
+                    Spacer(Modifier.width(8.dp))
                     Text(
-                        text = if (game.playstore_link.isNotBlank()) "Open in Playstore" else "Dive In",
+                        text =
+                            if (game.playstore_link.isNotBlank())
+                                "Open in Playstore"
+                            else
+                                "Dive In",
                         fontFamily = FontFamily.Monospace,
                         color = Color.White,
                         fontWeight = FontWeight.Bold,

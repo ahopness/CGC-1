@@ -3,9 +3,8 @@ package dev.lucasangelo.cgc1
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.animation.ExitTransition
-import androidx.compose.animation.slideInHorizontally
-import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -24,10 +23,10 @@ class MainActivity : FragmentActivity() {
                     navController = navController,
                     startDestination = "home",
                     enterTransition = {
-                        slideInHorizontally(initialOffsetX = { fullWidth -> fullWidth })
+                        slideInVertically(initialOffsetY = { fullWidth -> fullWidth })
                     },
                     exitTransition = {
-                        slideOutHorizontally(targetOffsetX = { fullWidth -> -fullWidth })
+                        slideOutVertically(targetOffsetY = { fullWidth -> -fullWidth })
                     },
                 ) {
                     composable ("home") {
