@@ -160,7 +160,7 @@ fun InfoPanel(game: Game?, onAboutButtonClick: () -> Unit) {
                         Triple("Open Website", R.drawable.icon_link) {
                             context.startActivity(Intent(
                                 Intent.ACTION_VIEW,
-                                "https://lucasangelo.dev".toUri()
+                                "https://lucasangelo.dev/cgc-1".toUri()
                             ).apply {
                                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                             })
@@ -352,7 +352,8 @@ fun PagerDotIndicator(pageCount: Int, currentPage: Int, modifier: Modifier = Mod
 fun AboutBottomSheet(sheetState: SheetState, onDismissRequest: () -> Unit) {
     ModalBottomSheet(
         sheetState = sheetState,
-        onDismissRequest = onDismissRequest
+        onDismissRequest = onDismissRequest,
+        containerColor = Color.Black
     ) {
         Column(
             verticalArrangement = Arrangement.spacedBy(8.dp),
